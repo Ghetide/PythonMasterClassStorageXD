@@ -1,0 +1,28 @@
+users = {}
+status = ""
+
+while status != "q":
+    status = input("Are you a registered user? y/n? Press q to quit: ")  
+
+    if status == "n":
+         createLogin = input("Create login name: ")
+
+         if createLogin in users:
+             print("Login name already exist!\n")
+         else:
+             createPassw = input("Create password: ")
+             users[createLogin] = createPassw
+             print("\nUser created!\n")     
+
+    elif status == "y": 
+        login = input("Enter login name: ")
+
+        if login in users:
+           passw = input("Enter password: ")
+           print
+
+           if login in users and passw in users:
+               print("Login successful!\n")
+
+        else:
+            print("User doesn't exist!\n")
