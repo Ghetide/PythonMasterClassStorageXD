@@ -1,0 +1,5 @@
+x = input("Podaj imie: ")
+if (x[len(x)-1]) == "a":
+    print("Jestes kobieta")
+else:
+    print("Jestes M")
